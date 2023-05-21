@@ -34,7 +34,7 @@ export class PaypalButtonComponent implements OnInit {
           purchase_units: [
             {
               amount: {
-                currency_code: 'CAD',
+                currency_code: 'EUR',
                 value: self.order.totalPrice,
               },
             },
@@ -51,19 +51,19 @@ export class PaypalButtonComponent implements OnInit {
               this.cartService.clearCart();
               this.router.navigateByUrl('/track/' + orderId);
               this.toastrService.success(
-                'Payment Saved Successfully',
+                'El pago se ha realizado correctamente',
                 'Success'
               );
             },
             error: (error) => {
-              this.toastrService.error('Payment Save Failed', 'Error');
+              this.toastrService.error('No se ha podido procesar el pago', 'Error');
             }
           }
         );
       },
 
       onError: (err: any) => {
-        this.toastrService.error('Payment Failed', 'Error');
+        this.toastrService.error('Pago fallido', 'Error');
         console.log(err);
       },
     })

@@ -93,7 +93,7 @@ img{
 }
 
 .price::before{
-  content: "Price: ";
+  content: "Precio: ";
   color: darkgrey;
 }
 

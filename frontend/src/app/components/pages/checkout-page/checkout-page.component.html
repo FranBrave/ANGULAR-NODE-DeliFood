@@ -2,22 +2,18 @@
   <div class="content">
     <app-title title="Order Form" fontSize="1.6rem"></app-title>
     <form [formGroup]="checkoutForm">
-      <text-input [control]="fc.name" label="Name"></text-input>
-      <text-input [control]="fc.address" label="Address"></text-input>
+      <text-input [control]="fc.name" label="Nombre"></text-input>
+      <text-input [control]="fc.address" label="Dirección"></text-input>
     </form>
     <order-items-list [order]="order"></order-items-list>
   </div>
   <div class="map">
-    <app-title
-    title="Choose Your Address On Map"
-    fontSize="1.6rem"></app-title>
+    <app-title title="Posiciónate en el mapa" fontSize="1.6rem"></app-title>
     <map [order]="order"></map>
   </div>
   <div class="buttons-container">
     <div class="buttons">
-      <button (click)="createOrder()">
-        Go To Payment
-      </button>
+      <button (click)="createOrder()">Ir al pago</button>
     </div>
   </div>
 </div>

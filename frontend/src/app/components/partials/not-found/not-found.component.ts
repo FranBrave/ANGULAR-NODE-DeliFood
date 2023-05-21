@@ -9,9 +9,9 @@ export class NotFoundComponent implements OnInit {
   @Input()
   visible = false;
   @Input()
-  notFoundMessage = "Nothing Found!";
+  notFoundMessage = "No se ha encontrado";
   @Input()
-  resetLinkText = "Reset";
+  resetLinkText = "Reiniciar";
   @Input()
   resetLinkRoute = "/";
   constructor() { }
