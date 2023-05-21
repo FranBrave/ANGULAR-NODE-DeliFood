@@ -30,12 +30,12 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
-            `Welcome to Foodmine ${user.name}!`,
-            'Login Successful'
+            `Bienvenido a Deli Food ${user.name}!`,
+            'Login correcto'
           )
         },
         error: (errorResponse) => {
-          this.toastrService.error(errorResponse.error, 'Login Failed');
+          this.toastrService.error(errorResponse.error, 'Login fallido');
         }
       })
     );
@@ -48,13 +48,13 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
-            `Welcome to the Foodmine ${user.name}`,
-            'Register Successful'
+            `Bienvenido a Deli Food ${user.name}`,
+            'Registro completado'
           )
         },
         error: (errorResponse) => {
           this.toastrService.error(errorResponse.error,
-            'Register Failed')
+            'Registro fallido')
         }
       })
     )
