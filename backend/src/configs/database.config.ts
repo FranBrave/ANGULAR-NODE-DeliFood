@@ -1,17 +1,11 @@
-import { connect, ConnectOptions } from 'mongoose';
+import {connect, ConnectOptions} from 'mongoose';
 
 export const dbConnect = () => {
-    const mongoURI = process.env.MONGO_URI;
-    if (!mongoURI) {
-        console.log("Error: MONGO_URI not defined");
-        return;
-    }
-
-    connect(mongoURI, {
+    connect('mongodb+srv://FranBrave:V4hXpp6BxuOofNG6@franbrave.qzw1i.mongodb.net/DeliFood?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     } as ConnectOptions).then(
-        () => console.log("Connected successfully"),
+        () => console.log("connect successfully"),
         (error) => console.log(error)
-    );
+    )
 }
