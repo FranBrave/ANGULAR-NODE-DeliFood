@@ -30,12 +30,21 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
+<<<<<<< HEAD
             `Bienvenido a Deli Food ${user.name}!`,
             'Login correcto'
           )
         },
         error: (errorResponse) => {
           this.toastrService.error(errorResponse.error, 'Login fallido');
+=======
+            `Welcome to Foodmine ${user.name}!`,
+            'Login Successful'
+          )
+        },
+        error: (errorResponse) => {
+          this.toastrService.error(errorResponse.error, 'Login Failed');
+>>>>>>> be5b9b4b1c968cfeaeeb270c88785394b9cbdabc
         }
       })
     );
@@ -48,13 +57,22 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
+<<<<<<< HEAD
             `Bienvenido a Deli Food ${user.name}`,
             'Registro completado'
+=======
+            `Welcome to the Foodmine ${user.name}`,
+            'Register Successful'
+>>>>>>> be5b9b4b1c968cfeaeeb270c88785394b9cbdabc
           )
         },
         error: (errorResponse) => {
           this.toastrService.error(errorResponse.error,
+<<<<<<< HEAD
             'Registro fallido')
+=======
+            'Register Failed')
+>>>>>>> be5b9b4b1c968cfeaeeb270c88785394b9cbdabc
         }
       })
     )
